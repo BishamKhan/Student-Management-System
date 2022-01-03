@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  /* background-color: chocolate; */
+  /* background-image: url("schoolbg.jpg"); */
+}
+
+body{
+  /* background-color: chocolate !important; */
+  /* background-image: url("schoolbg.jpg");  */
+  background-image: url("G:\GIT Projects\Student Management System\sms_app\src\images\schoolbg.jpg");
+  background-repeat: no-repeat;
+  background-size: 1400px 650px;
+}

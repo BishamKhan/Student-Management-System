@@ -1,0 +1,44 @@
+/* .head{
+    color: blue;
+    padding-left: 550px;
+}
+
+.container{
+    background-color: blueviolet;
+    width: 500px;
+    margin-left: 280px;
+    margin-bottom: 150px;
+} */
+
+.box{
+    margin: 10px;
+}
+
+.containers{
+    /* background-color: brown; */
+    margin-top: 50px;
+    margin-left: 280px;
+    margin-right: 50px;
+    display: flex;
+}
+
+.cont1{
+    /* background-color: skyblue; */
+    width: 300px;
+    height: 160px;
+    margin-left: 10px;
+    /* padding-left:60px; */
+}
+
+.contname{
+   color: black; 
+   margin-left: 70px;
+   margin-top: -5px;
+}
+
+.topimage{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+}

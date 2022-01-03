@@ -1,0 +1,23 @@
+.side{
+    background-color: #233a52;
+    width: 220px;
+    /* margin-left: 10px; */
+    margin-top: 0px;
+    float: left;
+
+    
+}
+
+
+
+.menu{
+    background-color: #233a52;
+    width:220px;
+    /* height: 400px; */
+    height: 525px;
+    color: white;
+}
+
+.menuitem{
+    margin-top: 10px !important;
+}
