@@ -2,33 +2,45 @@ import "./login.css";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { alpha, styled } from '@mui/material/styles';
 
 function Login() {
 
+  const func1=()=>{
+
+  }
+
+
   return (
       <div className="mainlogin">
-     <h2 className="form-title"  style={{color:'white'}}  >Log In</h2>
-
+     <h2 className="form-title"  >Log In</h2>
+<div className="form">
      <div className="input">
-       
-<TextField 
-className="input"
-          // id="outlined-password-input"
-          label="Email"
-          type="email"
-          autoComplete="current-email"
-        />
-     <TextField
-          // id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-        />
+        <Box
+      component="form"
+      sx={{
+        
+        '& > :not(style)': { m: 1, width: '29ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+       <TextField
+       className="field"
+        id="outlined-basic" 
+        label="Username"
+        type="name"
+        variant="outlined" />
+        <TextField
+         className="field"
+        id="outlined-basic" 
+        label="Password"
+        type="password"
+        variant="outlined" />
+ </Box>
         </div>
         <div className="button">
-        <Button variant="contained">Login</Button>
-        <Button variant="contained">Signup</Button>
+        <Button  className="field" variant="contained">Login</Button>
+        </div>
         </div>
 
       </div>

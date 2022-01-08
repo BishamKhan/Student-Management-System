@@ -17,7 +17,7 @@ function Top() {
       <AppBar position="static" style={{backgroundColor:'#192b3e'}}>
         <Toolbar>
    
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography onClick={()=> window.location.href= "/"}  variant="h6" component="div" sx={{ flexGrow: 1,cursor:"pointer" }}>
             Student Management School
           </Typography>
           <Button color="inherit">Login</Button>

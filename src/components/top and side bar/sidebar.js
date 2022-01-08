@@ -24,8 +24,8 @@ function Sidebar() {
   <Paper>
     <MenuList className="menu" >
       <MenuItem className="menuitem" onClick={()=> window.location.href= "/login"} style={{ fontWeight:"bold"}}>Profile</MenuItem>
-      <MenuItem className="menuitem" onClick={()=> window.location.href= "/addstudent"}>Add Students</MenuItem>
-      <MenuItem className="menuitem">Students</MenuItem>
+      <MenuItem className="menuitem"  onClick={()=> window.location.href= "/addstudent"}>Add Students</MenuItem>
+      <MenuItem className="menuitem" onClick={()=> window.location.href= "/student"}>Students</MenuItem>
       <MenuItem className="menuitem">Subjects</MenuItem>
       <MenuItem className="menuitem">Announcements</MenuItem>
       <MenuItem className="menuitem">Result</MenuItem>
