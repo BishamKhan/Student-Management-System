@@ -1,0 +1,24 @@
+.heading{
+    color: #ffff;
+    /* background-color:red; */
+    font-family: san-serif;
+    font-size:47px ;
+    padding-left:430px;
+    margin-left:210px !important
+}
+
+.table{
+    /* color: white !important; */
+    margin-left: 450px;
+    margin-top: 50px;
+    height: 445px;
+    background: rgba( 18, 18, 18, 0.45 );
+    width: 700px;
+    /* background-color: thistle; */
+}
+
+.MuiDataGrid-main{
+    color:#ffff !important;
+    font-weight:bold
+}
+
