@@ -16,7 +16,7 @@ function Landingpage() {
             <div onClick={()=> window.location.href= "/login"}  className="cont1" style={{backgroundColor:"#7dbef7"}}>
              <a onClick={()=> window.location.href= "/login"} > 
               <img src={group} alt="image" className='topimage' /> </a>
-            <h2  className="contname">students</h2> 
+            <h2  className="contname">Students</h2> 
             </div>
             <div className="cont1" style={{backgroundColor:"#50974e"}}>
             <img src={teacher} alt="image" className='topimage' />
