@@ -12,8 +12,6 @@ function App() {
     <BrowserRouter>
     <Top/>
     <Sidebar/>
-  
-
 
     <Switch>
       <Route exact path='/' component={Landingpage}/>

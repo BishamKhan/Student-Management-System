@@ -6,9 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-
 function Top() {
-
 
       return (
 
@@ -20,8 +18,8 @@ function Top() {
           <Typography onClick={()=> window.location.href= "/"}  variant="h6" component="div" sx={{ flexGrow: 1,cursor:"pointer" }}>
             Student Management School
           </Typography>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Logout</Button>
+          {/* <Button color="inherit">Login</Button> */}
+          <Button className="buts" color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
     </Box>
@@ -29,10 +27,6 @@ function Top() {
 
           )
         }
-
-        
-
-
 export default Top;
 
 

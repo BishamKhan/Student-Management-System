@@ -18,32 +18,87 @@ function Students() {
         })
     },[]);
 
+
+    function onupdate(id){
+
+      var inp1= prompt("What do you want to update Enter Field")
+      var load
+      var inp2;
+      switch(inp1){
+          case "name":
+              inp2=prompt("Enter New Name: ")
+              load={"name":inp2}
+              break;
+          case "Fathername":
+              inp2=prompt("Enter New Father Name: ")
+              load={"Fathername":inp2}
+              break;
+          case "Age":
+              inp2=parseInt(prompt("Enter New Age: "))
+              load={"Age":inp2}
+              break;
+          case "Rollno":
+              inp2=prompt("Enter New Rollno: ")
+              load={"Rollno":inp2}
+              break;
+      }
+      const gotdata=  {
+          "_id":id,
+          "edit":load
+      }
+      // alert(JSON.stringify(gotdata)) ;
+      axios({
+          method: 'put',
+          url: 'http://localhost:5000/students',
+          // headers: { 'content-type': 'application/x-www-form-urlencoded' },
+          data:gotdata
+        }).then((res)=>{
+          if (res != null){
+          alert("Updated")}
+          console.log(res)
+      })
+      .catch((e)=>alert(e))
+  }
+
+
+    function del(id){
+      axios.delete('http://localhost:5000/students',
+      {
+          data:{
+              "_id": id
+          },
+          
+      })
+      .then((res)=>{
+          if (res != null){
+          alert(JSON.stringify(res.data)+"  Deleted")}
+          console.log(res)
+      })
+      .catch((e)=>alert(e))
+  }
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'name', headerName: 'Name', width: 130 },
-        { field: 'Fathername', headerName: 'Father Name', width: 130 },
+        { field: 'name', headerName: 'Name', width: 100 },
+        { field: 'Fathername', headerName: 'Father Name', width: 110 },
         {
           field: 'Age',
           headerName: 'Age',
           type: 'number',
-          width: 90,
+          width: 60,
         },
         {
           field: 'Rollno',
           headerName: 'Roll No',
           description: 'This column has a value getter and is not sortable.',
           sortable: false,
-          width: 150,
+          width: 110,
         },
-        
-        { field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
-          return <Button >Delete</Button>  
-          ;}
-          ,},
-          { field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
-            return <Button >Edit</Button> 
+          { field: 'action', headerName: 'Action', width: 160, renderCell: (params) => {
             
-            
+            return <div><Button className="buts"  onClick={()=>onupdate(params.id)} >Edit</Button> 
+             <Button className="buts"  onClick={()=>del(params.id)} >Delete</Button> 
+           </div>
             ;}
             ,}
       ];
@@ -51,20 +106,6 @@ function Students() {
       const rows = state.map(elem => (
         { id: elem._id, Fathername: elem.Fathername, name: elem.name, Age: elem.Age,Rollno:elem.Rollno} 
       )) 
-      /*[
-        { id: 1, Fathername: 'Snow', name: 'Jon', Age: 35,Rollno:"2020-se-227"},
-        { id: 2, Fathername: 'Lannister', name: 'Cersei', Age: 42,Rollno:"2020-se-230" },
-        { id: 3, Fathername: 'Lannister', name: 'Jaime', Age: 45 ,Rollno:"2020-se-231"},
-        { id: 4, Fathername: 'Stark', name: 'Arya', Age: 16 ,Rollno:"2020-se-236"},
-        { id: 5, Fathername: 'Targaryen', name: 'Daenerys', Age: 20 ,Rollno:"2020-se-239"},
-        { id: 6, Fathername: 'Melisandre', name: 'Zaid', Age: 150 ,Rollno:"2020-se-193"},
-        { id: 7, Fathername: 'Clifford', name: 'Ferrara', Age: 44 ,Rollno:"2020-se-215"},
-        { id: 8, Fathername: 'Frances', name: 'Rossini', Age: 36 ,Rollno:"2020-se-191"},
-        { id: 9, Fathername: 'Roxie', name: 'Harvey', Age: 65 ,Rollno:"2020-se-197"},
-        
-
-        // { <Button  className="field" variant="contained">Login</Button>}
-      ]*/;
       
 
   return (
@@ -83,35 +124,6 @@ function Students() {
       </div>
 
   )}
-
-
-
-
-
-//  {
-//     field: "action",
-//     headerName: "Action",
-//     sortable: false,
-//     renderCell: (params) => {
-//       const onClick = (e) => {
-//         e.stopPropagation(); // don't select this row after clicking
-
-//         const api: GridApi = params.api;
-//         const thisRow: Record<string, GridCellValue> = {};
-
-//         api
-//           .getAllColumns()
-//           .filter((c) => c.field !== "__check__" && !!c)
-//           .forEach(
-//             (c) => (thisRow[c.field] = params.getValue(params.id, c.field))
-//           );
-
-//         return alert(JSON.stringify(thisRow, null, 4));
-//       };
-
-//       return <Button onClick={onClick}>Click</Button>;
-//     }
-
 
   
 export default Students;

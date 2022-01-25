@@ -1,20 +1,16 @@
-// import Login from "../components/login/login";
 import "./landingpage_admin.css";
 import group from '../../images/group.png'
 import teacher from '../../images/teacher.png'
 import course from '../../images/course.png'
 import fee from '../../images/fee.png'
 
-
-
 function Landingpage() {
 
       return (
-        
         <div className="main">
           <div className="containers">
-            <div onClick={()=> window.location.href= "/login"}  className="cont1" style={{backgroundColor:"#7dbef7"}}>
-             <a onClick={()=> window.location.href= "/login"} > 
+            <div  className="cont1" style={{backgroundColor:"#7dbef7"}}>
+             <a  onClick={()=> window.location.href= "/login"}> 
               <img src={group} alt="image" className='topimage' /> </a>
             <h2  className="contname">Students</h2> 
             </div>
@@ -34,9 +30,6 @@ function Landingpage() {
           </div>
           )
         }
-
-        
-
 
 export default Landingpage;
 

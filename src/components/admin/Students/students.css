@@ -4,13 +4,13 @@
     font-family: san-serif;
     font-size:47px ;
     padding-left:430px;
-    margin-left:210px !important
+    margin-left:250px !important
 }
 
 .table{
     /* color: white !important; */
-    margin-left: 450px;
-    margin-top: 50px;
+    margin-left: 430px;
+    margin-top: 40px;
     height: 445px;
     background: rgba( 18, 18, 18, 0.45 );
     width: 700px;
@@ -22,3 +22,12 @@
     font-weight:bold
 }
 
+
+.buts{
+    margin-right: 10px !important;
+    color: white !important;
+}
+
+.buts:hover{
+    background-color: #233a52 !important;
+}

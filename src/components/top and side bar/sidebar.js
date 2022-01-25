@@ -15,7 +15,8 @@ function Sidebar() {
         <div className="side">
         <div className="prof">
         <Stack direction="row" spacing={2}>
-          <Avatar src="/broken-image.jpg" style={{marginTop:'5px', marginLeft:'5px'}} />
+          <Avatar src="/broken-image.jpg" style={{marginTop:'5px', marginLeft:'5px',marginBottom:'10px'}} />
+          <h4 style={{marginTop:'15px', marginLeft:'10px',color:"white"}}>Admin</h4>
           </Stack>
       </div>
 
